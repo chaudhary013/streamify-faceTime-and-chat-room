@@ -1,0 +1,25 @@
+# Exported from Render on 2025-08-30T09:59:30Z
+services:
+- type: web
+  name: streamify-faceTime-and-chat-room
+  runtime: node
+  repo: https://github.com/chaudhary013/streamify-faceTime-and-chat-room
+  plan: free
+  envVars:
+  - key: VITE_STREAM_API_KEY
+    sync: false
+  - key: JWT_SECRET_KEY
+    sync: false
+  - key: STEAM_API_SECRET
+    sync: false
+  - key: STEAM_API_KEY
+    sync: false
+  - key: MONGO_URI
+    sync: false
+  - key: PORT
+    sync: false
+  region: oregon
+  buildCommand: npm run build
+  startCommand: npm run start
+  autoDeployTrigger: commit
+version: "1"
